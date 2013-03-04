@@ -1,0 +1,52 @@
+body {
+    background:#e2d5b0 url(../images/background.png) repeat-y;
+    font:13px sans-serif;
+}
+
+#layout {
+    display:table;
+    width:100%;
+    height:100%;
+}
+
+#layout > div {
+    display:table-row;
+}
+
+#header > div, #content > div {
+    display:table-cell;
+}
+
+#header {
+    height:40px;
+}
+
+#content, #content .right-column {
+    width:100%;
+    height:100%;
+}
+
+#content .right-column {
+    vertical-align:top;
+}
+
+.sidebar-container {
+    width:100px;
+    height:100%;
+}
+
+.shadow-container {
+    position:relative;
+    float:left;
+    width:0;
+    height:100%;
+}
+
+.shadow-container .shadow {
+    position:absolute;
+    left:-7px;
+    width:5px;
+    height:100%;
+    border-right:solid 2px #c3c3c3;
+    background:transparent url(../images/right_shadow.png) top right repeat-y;
+}
