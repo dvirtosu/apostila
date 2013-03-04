@@ -1,0 +1,66 @@
+#header > div {
+    border-bottom:1px solid #c3bebc;
+}
+
+#header .right-column {
+    vertical-align:bottom;
+}
+
+#header .title-container {
+    display:inline-block;
+    position:relative;
+    top:1px;
+    margin-left:-2px;
+    padding:5px 10px 7px 10px;
+    border:2px solid #c3bebc;
+    border-bottom:0;
+    border-radius:10px 10px 0 0;
+    background:#fff;
+}
+
+#header .title-container img {
+    position:relative;
+    top:3px;
+}
+
+#header .title-container span {
+    white-space:nowrap;
+}
+
+.sidebar-container {
+    width:330px;
+}
+
+#content > div {
+    background:#fff;
+}
+
+.toolbar-container {
+    padding-left:12px;
+}
+
+.objects-list-container {
+    height:320px;
+    overflow-y:auto;
+    border-top:1px solid #C3BEBC;
+}
+
+.bottom-container {
+    height:40px;
+    line-height:40px;
+    background-color:#F0F0E7;
+}
+
+.pagination-container {
+    float:left;
+    height:40px;
+    vertical-align:bottom;
+}
+
+.properties-container {
+    float:right;
+    padding-right:20px;
+    height:40px;
+    vertical-align:bottom;
+}
+

@@ -1,0 +1,79 @@
+#header .right-column {
+    border-bottom:1px solid #c3bebc;
+}
+
+#header .right-column {
+    vertical-align:bottom;
+}
+
+#header .title-container {
+    float:left;
+    padding:7px 0;
+    vertical-align:middle;
+    font-weight:bold;
+    white-space:nowrap;
+}
+
+#header .title-container img {
+    vertical-align:middle;
+}
+
+#header .title-container span {
+    margin:10px;
+    vertical-align:middle;
+    font-size:15px;
+}
+
+#header .nav-actions {
+    margin-right:7px;
+    padding:10px 0;
+    vertical-align:middle;
+}
+
+#header .nav-actions .h-list {
+    list-style:none;
+}
+
+#header .nav-actions .h-list li {
+    float:left;
+    margin:0 7px;
+}
+
+#header .nav-actions .h-list li a {
+    color:#000000;
+}
+
+.sidebar-container {
+    width:74px;
+}
+
+.scopes-switcher .scopes-box {
+    height:auto;
+}
+
+.scopes-switcher .empty-space {
+    height:90px;
+    border-bottom:solid 1px #C1B49E;
+}
+
+#content > .right-column {
+    background:#fff;
+}
+
+.shadow-container .shadow {
+    left:-6px;
+    border-right:solid 1px #a79f9b;
+}
+
+.toolbar-container {
+    padding-left:12px;
+    border-bottom:solid 1px #C1B49E;
+}
+
+.scope-environment > div {
+    display:none;
+}
+
+.objects-list .item .context-menu {
+    visibility:visible;
+}
