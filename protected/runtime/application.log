@@ -215,10 +215,10 @@ REQUEST_URI=/apostila/index.php/folder/1
 in C:\xampp\htdocs\apostila\protected\models\Document.php (161)
 in C:\xampp\htdocs\apostila\protected\controllers\FolderController.php (18)
 in C:\xampp\htdocs\apostila\index.php (24)
-2013/03/04 14:13:07 [error] [exception.CException] exception 'CException' with message 'Property "Folder.contentTypeId" is not defined.' in C:\xampp\htdocs\framework\base\CComponent.php:131
+2013/03/04 14:13:07 [error] [exception.CException] exception 'CException' with message 'Property "Folder.content_type_id" is not defined.' in C:\xampp\htdocs\framework\base\CComponent.php:131
 Stack trace:
-#0 C:\xampp\htdocs\framework\db\ar\CActiveRecord.php(144): CComponent->__get('contentTypeId')
-#1 C:\xampp\htdocs\apostila\protected\models\Document.php(168): CActiveRecord->__get('contentTypeId')
+#0 C:\xampp\htdocs\framework\db\ar\CActiveRecord.php(144): CComponent->__get('contenttype_id')
+#1 C:\xampp\htdocs\apostila\protected\models\Document.php(168): CActiveRecord->__get('contenttype_id')
 #2 C:\xampp\htdocs\apostila\protected\controllers\FolderController.php(18): Document->searchInFolder(Object(Folder))
 #3 C:\xampp\htdocs\framework\web\actions\CInlineAction.php(50): FolderController->actionView()
 #4 C:\xampp\htdocs\framework\web\CController.php(309): CInlineAction->runWithParams(Array)
@@ -231,10 +231,10 @@ Stack trace:
 #11 {main}
 REQUEST_URI=/apostila/index.php/folder/1
 ---
-2013/03/04 14:15:36 [error] [exception.CException] exception 'CException' with message 'Property "Folder.contentTypeId" is not defined.' in C:\xampp\htdocs\framework\base\CComponent.php:131
+2013/03/04 14:15:36 [error] [exception.CException] exception 'CException' with message 'Property "Folder.content_type_id" is not defined.' in C:\xampp\htdocs\framework\base\CComponent.php:131
 Stack trace:
-#0 C:\xampp\htdocs\framework\db\ar\CActiveRecord.php(144): CComponent->__get('contentTypeId')
-#1 C:\xampp\htdocs\apostila\protected\models\Document.php(168): CActiveRecord->__get('contentTypeId')
+#0 C:\xampp\htdocs\framework\db\ar\CActiveRecord.php(144): CComponent->__get('contenttype_id')
+#1 C:\xampp\htdocs\apostila\protected\models\Document.php(168): CActiveRecord->__get('contenttype_id')
 #2 C:\xampp\htdocs\apostila\protected\controllers\FolderController.php(18): Document->searchInFolder(Object(Folder))
 #3 C:\xampp\htdocs\framework\web\actions\CInlineAction.php(50): FolderController->actionView()
 #4 C:\xampp\htdocs\framework\web\CController.php(309): CInlineAction->runWithParams(Array)
@@ -275,10 +275,10 @@ REQUEST_URI=/apostila/index.php/folder/4
 in C:\xampp\htdocs\apostila\protected\models\Document.php (155)
 in C:\xampp\htdocs\apostila\protected\controllers\FolderController.php (18)
 in C:\xampp\htdocs\apostila\index.php (24)
-2013/03/04 14:40:00 [error] [exception.CException] exception 'CException' with message 'Property "Folder.contentTypeId" is not defined.' in C:\xampp\htdocs\framework\base\CComponent.php:131
+2013/03/04 14:40:00 [error] [exception.CException] exception 'CException' with message 'Property "Folder.content_type_id" is not defined.' in C:\xampp\htdocs\framework\base\CComponent.php:131
 Stack trace:
-#0 C:\xampp\htdocs\framework\db\ar\CActiveRecord.php(144): CComponent->__get('contentTypeId')
-#1 C:\xampp\htdocs\apostila\protected\models\Document.php(162): CActiveRecord->__get('contentTypeId')
+#0 C:\xampp\htdocs\framework\db\ar\CActiveRecord.php(144): CComponent->__get('contenttype_id')
+#1 C:\xampp\htdocs\apostila\protected\models\Document.php(162): CActiveRecord->__get('contenttype_id')
 #2 C:\xampp\htdocs\apostila\protected\controllers\FolderController.php(18): Document->searchInFolder(Object(Folder))
 #3 C:\xampp\htdocs\framework\web\actions\CInlineAction.php(50): FolderController->actionView()
 #4 C:\xampp\htdocs\framework\web\CController.php(309): CInlineAction->runWithParams(Array)
@@ -291,10 +291,10 @@ Stack trace:
 #11 {main}
 REQUEST_URI=/apostila/index.php/folder/1
 ---
-2013/03/04 14:43:32 [error] [exception.CException] exception 'CException' with message 'Property "Folder.contentTypeId" is not defined.' in C:\xampp\htdocs\framework\base\CComponent.php:131
+2013/03/04 14:43:32 [error] [exception.CException] exception 'CException' with message 'Property "Folder.content_type_id" is not defined.' in C:\xampp\htdocs\framework\base\CComponent.php:131
 Stack trace:
-#0 C:\xampp\htdocs\framework\db\ar\CActiveRecord.php(144): CComponent->__get('contentTypeId')
-#1 C:\xampp\htdocs\apostila\protected\models\Document.php(162): CActiveRecord->__get('contentTypeId')
+#0 C:\xampp\htdocs\framework\db\ar\CActiveRecord.php(144): CComponent->__get('contenttype_id')
+#1 C:\xampp\htdocs\apostila\protected\models\Document.php(162): CActiveRecord->__get('contenttype_id')
 #2 C:\xampp\htdocs\apostila\protected\controllers\FolderController.php(18): Document->searchInFolder(Object(Folder))
 #3 C:\xampp\htdocs\framework\web\actions\CInlineAction.php(50): FolderController->actionView()
 #4 C:\xampp\htdocs\framework\web\CController.php(309): CInlineAction->runWithParams(Array)
@@ -307,3 +307,270 @@ Stack trace:
 #11 {main}
 REQUEST_URI=/apostila/index.php/folder/1
 ---
+2013/03/04 14:56:47 [error] [exception.CException] exception 'CException' with message 'Property "Document.createUserId" is not defined.' in C:\xampp\htdocs\framework\base\CComponent.php:131
+Stack trace:
+#0 C:\xampp\htdocs\framework\db\ar\CActiveRecord.php(144): CComponent->__get('createUserId')
+#1 C:\xampp\htdocs\apostila\protected\models\Document.php(190): CActiveRecord->__get('createUserId')
+#2 C:\xampp\htdocs\apostila\protected\controllers\FolderController.php(18): Document->searchInFolder(Object(Folder))
+#3 C:\xampp\htdocs\framework\web\actions\CInlineAction.php(50): FolderController->actionView()
+#4 C:\xampp\htdocs\framework\web\CController.php(309): CInlineAction->runWithParams(Array)
+#5 C:\xampp\htdocs\framework\web\CController.php(287): CController->runAction(Object(CInlineAction))
+#6 C:\xampp\htdocs\framework\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 C:\xampp\htdocs\framework\web\CWebApplication.php(276): CController->run('view')
+#8 C:\xampp\htdocs\framework\web\CWebApplication.php(135): CWebApplication->runController('folder/view')
+#9 C:\xampp\htdocs\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#10 C:\xampp\htdocs\apostila\index.php(24): CApplication->run()
+#11 {main}
+REQUEST_URI=/apostila/index.php/folder/1
+---
+2013/03/04 14:57:17 [error] [exception.CDbException] exception 'CDbException' with message 'Relation "folders_ontents" is not defined in active record class "Document".' in C:\xampp\htdocs\framework\db\ar\CActiveFinder.php:215
+Stack trace:
+#0 C:\xampp\htdocs\framework\db\ar\CActiveFinder.php(312): CActiveFinder->buildJoinTree(Object(CJoinElement), 'folders_ontents', Array)
+#1 C:\xampp\htdocs\framework\db\ar\CActiveFinder.php(49): CActiveFinder->buildJoinTree(Object(CJoinElement), Array)
+#2 C:\xampp\htdocs\framework\db\ar\CActiveRecord.php(1539): CActiveFinder->__construct(Object(Document), Array)
+#3 C:\xampp\htdocs\framework\web\CActiveDataProvider.php(179): CActiveRecord->count(Object(CDbCriteria))
+#4 C:\xampp\htdocs\framework\web\CDataProvider.php(193): CActiveDataProvider->calculateTotalItemCount()
+#5 C:\xampp\htdocs\framework\web\CActiveDataProvider.php(129): CDataProvider->getTotalItemCount()
+#6 C:\xampp\htdocs\framework\web\CDataProvider.php(137): CActiveDataProvider->fetchData()
+#7 C:\xampp\htdocs\apostila\protected\controllers\FolderController.php(24): CDataProvider->getData()
+#8 C:\xampp\htdocs\framework\web\actions\CInlineAction.php(50): FolderController->actionView()
+#9 C:\xampp\htdocs\framework\web\CController.php(309): CInlineAction->runWithParams(Array)
+#10 C:\xampp\htdocs\framework\web\CController.php(287): CController->runAction(Object(CInlineAction))
+#11 C:\xampp\htdocs\framework\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#12 C:\xampp\htdocs\framework\web\CWebApplication.php(276): CController->run('view')
+#13 C:\xampp\htdocs\framework\web\CWebApplication.php(135): CWebApplication->runController('folder/view')
+#14 C:\xampp\htdocs\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#15 C:\xampp\htdocs\apostila\index.php(24): CApplication->run()
+#16 {main}
+REQUEST_URI=/apostila/index.php/folder/1
+---
+2013/03/04 14:59:17 [error] [exception.CDbException] exception 'CDbException' with message 'Relation "folders_ontents" is not defined in active record class "Document".' in C:\xampp\htdocs\framework\db\ar\CActiveFinder.php:215
+Stack trace:
+#0 C:\xampp\htdocs\framework\db\ar\CActiveFinder.php(312): CActiveFinder->buildJoinTree(Object(CJoinElement), 'folders_ontents', Array)
+#1 C:\xampp\htdocs\framework\db\ar\CActiveFinder.php(49): CActiveFinder->buildJoinTree(Object(CJoinElement), Array)
+#2 C:\xampp\htdocs\framework\db\ar\CActiveRecord.php(1539): CActiveFinder->__construct(Object(Document), Array)
+#3 C:\xampp\htdocs\framework\web\CActiveDataProvider.php(179): CActiveRecord->count(Object(CDbCriteria))
+#4 C:\xampp\htdocs\framework\web\CDataProvider.php(193): CActiveDataProvider->calculateTotalItemCount()
+#5 C:\xampp\htdocs\framework\web\CActiveDataProvider.php(129): CDataProvider->getTotalItemCount()
+#6 C:\xampp\htdocs\framework\web\CDataProvider.php(137): CActiveDataProvider->fetchData()
+#7 C:\xampp\htdocs\apostila\protected\controllers\FolderController.php(24): CDataProvider->getData()
+#8 C:\xampp\htdocs\framework\web\actions\CInlineAction.php(50): FolderController->actionView()
+#9 C:\xampp\htdocs\framework\web\CController.php(309): CInlineAction->runWithParams(Array)
+#10 C:\xampp\htdocs\framework\web\CController.php(287): CController->runAction(Object(CInlineAction))
+#11 C:\xampp\htdocs\framework\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#12 C:\xampp\htdocs\framework\web\CWebApplication.php(276): CController->run('view')
+#13 C:\xampp\htdocs\framework\web\CWebApplication.php(135): CWebApplication->runController('folder/view')
+#14 C:\xampp\htdocs\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#15 C:\xampp\htdocs\apostila\index.php(24): CApplication->run()
+#16 {main}
+REQUEST_URI=/apostila/index.php/folder/1
+---
+2013/03/04 15:01:47 [error] [exception.CDbException] exception 'CDbException' with message 'Relation "folders_ontents" is not defined in active record class "Document".' in C:\xampp\htdocs\framework\db\ar\CActiveFinder.php:215
+Stack trace:
+#0 C:\xampp\htdocs\framework\db\ar\CActiveFinder.php(312): CActiveFinder->buildJoinTree(Object(CJoinElement), 'folders_ontents', Array)
+#1 C:\xampp\htdocs\framework\db\ar\CActiveFinder.php(49): CActiveFinder->buildJoinTree(Object(CJoinElement), Array)
+#2 C:\xampp\htdocs\framework\db\ar\CActiveRecord.php(1539): CActiveFinder->__construct(Object(Document), Array)
+#3 C:\xampp\htdocs\framework\web\CActiveDataProvider.php(179): CActiveRecord->count(Object(CDbCriteria))
+#4 C:\xampp\htdocs\framework\web\CDataProvider.php(193): CActiveDataProvider->calculateTotalItemCount()
+#5 C:\xampp\htdocs\framework\web\CActiveDataProvider.php(129): CDataProvider->getTotalItemCount()
+#6 C:\xampp\htdocs\framework\web\CDataProvider.php(137): CActiveDataProvider->fetchData()
+#7 C:\xampp\htdocs\apostila\protected\controllers\FolderController.php(24): CDataProvider->getData()
+#8 C:\xampp\htdocs\framework\web\actions\CInlineAction.php(50): FolderController->actionView()
+#9 C:\xampp\htdocs\framework\web\CController.php(309): CInlineAction->runWithParams(Array)
+#10 C:\xampp\htdocs\framework\web\CController.php(287): CController->runAction(Object(CInlineAction))
+#11 C:\xampp\htdocs\framework\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#12 C:\xampp\htdocs\framework\web\CWebApplication.php(276): CController->run('view')
+#13 C:\xampp\htdocs\framework\web\CWebApplication.php(135): CWebApplication->runController('folder/view')
+#14 C:\xampp\htdocs\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#15 C:\xampp\htdocs\apostila\index.php(24): CApplication->run()
+#16 {main}
+REQUEST_URI=/apostila/index.php/folder/1
+---
+2013/03/04 15:03:32 [error] [exception.CDbException] exception 'CDbException' with message 'Relation "folders_contents" is not defined in active record class "Document".' in C:\xampp\htdocs\framework\db\ar\CActiveFinder.php:215
+Stack trace:
+#0 C:\xampp\htdocs\framework\db\ar\CActiveFinder.php(312): CActiveFinder->buildJoinTree(Object(CJoinElement), 'folders_content...', Array)
+#1 C:\xampp\htdocs\framework\db\ar\CActiveFinder.php(49): CActiveFinder->buildJoinTree(Object(CJoinElement), Array)
+#2 C:\xampp\htdocs\framework\db\ar\CActiveRecord.php(1539): CActiveFinder->__construct(Object(Document), Array)
+#3 C:\xampp\htdocs\framework\web\CActiveDataProvider.php(179): CActiveRecord->count(Object(CDbCriteria))
+#4 C:\xampp\htdocs\framework\web\CDataProvider.php(193): CActiveDataProvider->calculateTotalItemCount()
+#5 C:\xampp\htdocs\framework\web\CActiveDataProvider.php(129): CDataProvider->getTotalItemCount()
+#6 C:\xampp\htdocs\framework\web\CDataProvider.php(137): CActiveDataProvider->fetchData()
+#7 C:\xampp\htdocs\apostila\protected\controllers\FolderController.php(24): CDataProvider->getData()
+#8 C:\xampp\htdocs\framework\web\actions\CInlineAction.php(50): FolderController->actionView()
+#9 C:\xampp\htdocs\framework\web\CController.php(309): CInlineAction->runWithParams(Array)
+#10 C:\xampp\htdocs\framework\web\CController.php(287): CController->runAction(Object(CInlineAction))
+#11 C:\xampp\htdocs\framework\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#12 C:\xampp\htdocs\framework\web\CWebApplication.php(276): CController->run('view')
+#13 C:\xampp\htdocs\framework\web\CWebApplication.php(135): CWebApplication->runController('folder/view')
+#14 C:\xampp\htdocs\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#15 C:\xampp\htdocs\apostila\index.php(24): CApplication->run()
+#16 {main}
+REQUEST_URI=/apostila/index.php/folder/1
+---
+2013/03/04 15:05:20 [error] [exception.CDbException] exception 'CDbException' with message 'Relation "folders_contents" is not defined in active record class "Document".' in C:\xampp\htdocs\framework\db\ar\CActiveFinder.php:215
+Stack trace:
+#0 C:\xampp\htdocs\framework\db\ar\CActiveFinder.php(312): CActiveFinder->buildJoinTree(Object(CJoinElement), 'folders_content...', Array)
+#1 C:\xampp\htdocs\framework\db\ar\CActiveFinder.php(49): CActiveFinder->buildJoinTree(Object(CJoinElement), Array)
+#2 C:\xampp\htdocs\framework\db\ar\CActiveRecord.php(1539): CActiveFinder->__construct(Object(Document), Array)
+#3 C:\xampp\htdocs\framework\web\CActiveDataProvider.php(179): CActiveRecord->count(Object(CDbCriteria))
+#4 C:\xampp\htdocs\framework\web\CDataProvider.php(193): CActiveDataProvider->calculateTotalItemCount()
+#5 C:\xampp\htdocs\framework\web\CActiveDataProvider.php(129): CDataProvider->getTotalItemCount()
+#6 C:\xampp\htdocs\framework\web\CDataProvider.php(137): CActiveDataProvider->fetchData()
+#7 C:\xampp\htdocs\apostila\protected\controllers\FolderController.php(24): CDataProvider->getData()
+#8 C:\xampp\htdocs\framework\web\actions\CInlineAction.php(50): FolderController->actionView()
+#9 C:\xampp\htdocs\framework\web\CController.php(309): CInlineAction->runWithParams(Array)
+#10 C:\xampp\htdocs\framework\web\CController.php(287): CController->runAction(Object(CInlineAction))
+#11 C:\xampp\htdocs\framework\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#12 C:\xampp\htdocs\framework\web\CWebApplication.php(276): CController->run('view')
+#13 C:\xampp\htdocs\framework\web\CWebApplication.php(135): CWebApplication->runController('folder/view')
+#14 C:\xampp\htdocs\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#15 C:\xampp\htdocs\apostila\index.php(24): CApplication->run()
+#16 {main}
+REQUEST_URI=/apostila/index.php/folder/1
+---
+2013/03/04 15:05:40 [error] [exception.CDbException] exception 'CDbException' with message 'Relation "foldersContents" is not defined in active record class "Document".' in C:\xampp\htdocs\framework\db\ar\CActiveFinder.php:215
+Stack trace:
+#0 C:\xampp\htdocs\framework\db\ar\CActiveFinder.php(312): CActiveFinder->buildJoinTree(Object(CJoinElement), 'foldersContents', Array)
+#1 C:\xampp\htdocs\framework\db\ar\CActiveFinder.php(49): CActiveFinder->buildJoinTree(Object(CJoinElement), Array)
+#2 C:\xampp\htdocs\framework\db\ar\CActiveRecord.php(1539): CActiveFinder->__construct(Object(Document), Array)
+#3 C:\xampp\htdocs\framework\web\CActiveDataProvider.php(179): CActiveRecord->count(Object(CDbCriteria))
+#4 C:\xampp\htdocs\framework\web\CDataProvider.php(193): CActiveDataProvider->calculateTotalItemCount()
+#5 C:\xampp\htdocs\framework\web\CActiveDataProvider.php(129): CDataProvider->getTotalItemCount()
+#6 C:\xampp\htdocs\framework\web\CDataProvider.php(137): CActiveDataProvider->fetchData()
+#7 C:\xampp\htdocs\apostila\protected\controllers\FolderController.php(24): CDataProvider->getData()
+#8 C:\xampp\htdocs\framework\web\actions\CInlineAction.php(50): FolderController->actionView()
+#9 C:\xampp\htdocs\framework\web\CController.php(309): CInlineAction->runWithParams(Array)
+#10 C:\xampp\htdocs\framework\web\CController.php(287): CController->runAction(Object(CInlineAction))
+#11 C:\xampp\htdocs\framework\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#12 C:\xampp\htdocs\framework\web\CWebApplication.php(276): CController->run('view')
+#13 C:\xampp\htdocs\framework\web\CWebApplication.php(135): CWebApplication->runController('folder/view')
+#14 C:\xampp\htdocs\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#15 C:\xampp\htdocs\apostila\index.php(24): CApplication->run()
+#16 {main}
+REQUEST_URI=/apostila/index.php/folder/1
+---
+2013/03/04 15:06:26 [error] [exception.CException] exception 'CException' with message 'Property "Folder.content_type_id" is not defined.' in C:\xampp\htdocs\framework\base\CComponent.php:131
+Stack trace:
+#0 C:\xampp\htdocs\framework\db\ar\CActiveRecord.php(144): CComponent->__get('contenttype_id')
+#1 C:\xampp\htdocs\apostila\protected\views\folder\_folder_icon.php(4): CActiveRecord->__get('contenttype_id')
+#2 C:\xampp\htdocs\framework\web\CBaseController.php(127): require('C:\xampp\htdocs...')
+#3 C:\xampp\htdocs\framework\web\CBaseController.php(96): CBaseController->renderInternal('C:\xampp\htdocs...', Array, true)
+#4 C:\xampp\htdocs\framework\web\CController.php(870): CBaseController->renderFile('C:\xampp\htdocs...', Array, true)
+#5 C:\xampp\htdocs\apostila\protected\views\folder\_header.php(10): CController->renderPartial('_folder_icon', Array)
+#6 C:\xampp\htdocs\framework\web\CBaseController.php(127): require('C:\xampp\htdocs...')
+#7 C:\xampp\htdocs\framework\web\CBaseController.php(96): CBaseController->renderInternal('C:\xampp\htdocs...', Array, true)
+#8 C:\xampp\htdocs\framework\web\CController.php(870): CBaseController->renderFile('C:\xampp\htdocs...', Array, true)
+#9 C:\xampp\htdocs\apostila\protected\views\folder\view.php(7): CController->renderPartial('_header', Array)
+#10 C:\xampp\htdocs\framework\web\CBaseController.php(127): require('C:\xampp\htdocs...')
+#11 C:\xampp\htdocs\framework\web\CBaseController.php(96): CBaseController->renderInternal('C:\xampp\htdocs...', Array, true)
+#12 C:\xampp\htdocs\framework\web\CController.php(870): CBaseController->renderFile('C:\xampp\htdocs...', Array, true)
+#13 C:\xampp\htdocs\framework\web\CController.php(783): CController->renderPartial('view', Array, true)
+#14 C:\xampp\htdocs\apostila\protected\controllers\FolderController.php(26): CController->render('view', Array)
+#15 C:\xampp\htdocs\framework\web\actions\CInlineAction.php(50): FolderController->actionView()
+#16 C:\xampp\htdocs\framework\web\CController.php(309): CInlineAction->runWithParams(Array)
+#17 C:\xampp\htdocs\framework\web\CController.php(287): CController->runAction(Object(CInlineAction))
+#18 C:\xampp\htdocs\framework\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#19 C:\xampp\htdocs\framework\web\CWebApplication.php(276): CController->run('view')
+#20 C:\xampp\htdocs\framework\web\CWebApplication.php(135): CWebApplication->runController('folder/view')
+#21 C:\xampp\htdocs\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#22 C:\xampp\htdocs\apostila\index.php(24): CApplication->run()
+#23 {main}
+REQUEST_URI=/apostila/index.php/folder/1
+---
+2013/03/04 15:07:13 [error] [exception.CException] exception 'CException' with message 'Property "Folder.contenttype_id" is not defined.' in C:\xampp\htdocs\framework\base\CComponent.php:131
+Stack trace:
+#0 C:\xampp\htdocs\framework\db\ar\CActiveRecord.php(144): CComponent->__get('contenttype_id')
+#1 C:\xampp\htdocs\apostila\protected\views\folder\_folder_icon.php(4): CActiveRecord->__get('contenttype_id')
+#2 C:\xampp\htdocs\framework\web\CBaseController.php(127): require('C:\xampp\htdocs...')
+#3 C:\xampp\htdocs\framework\web\CBaseController.php(96): CBaseController->renderInternal('C:\xampp\htdocs...', Array, true)
+#4 C:\xampp\htdocs\framework\web\CController.php(870): CBaseController->renderFile('C:\xampp\htdocs...', Array, true)
+#5 C:\xampp\htdocs\apostila\protected\views\folder\_header.php(10): CController->renderPartial('_folder_icon', Array)
+#6 C:\xampp\htdocs\framework\web\CBaseController.php(127): require('C:\xampp\htdocs...')
+#7 C:\xampp\htdocs\framework\web\CBaseController.php(96): CBaseController->renderInternal('C:\xampp\htdocs...', Array, true)
+#8 C:\xampp\htdocs\framework\web\CController.php(870): CBaseController->renderFile('C:\xampp\htdocs...', Array, true)
+#9 C:\xampp\htdocs\apostila\protected\views\folder\view.php(7): CController->renderPartial('_header', Array)
+#10 C:\xampp\htdocs\framework\web\CBaseController.php(127): require('C:\xampp\htdocs...')
+#11 C:\xampp\htdocs\framework\web\CBaseController.php(96): CBaseController->renderInternal('C:\xampp\htdocs...', Array, true)
+#12 C:\xampp\htdocs\framework\web\CController.php(870): CBaseController->renderFile('C:\xampp\htdocs...', Array, true)
+#13 C:\xampp\htdocs\framework\web\CController.php(783): CController->renderPartial('view', Array, true)
+#14 C:\xampp\htdocs\apostila\protected\controllers\FolderController.php(26): CController->render('view', Array)
+#15 C:\xampp\htdocs\framework\web\actions\CInlineAction.php(50): FolderController->actionView()
+#16 C:\xampp\htdocs\framework\web\CController.php(309): CInlineAction->runWithParams(Array)
+#17 C:\xampp\htdocs\framework\web\CController.php(287): CController->runAction(Object(CInlineAction))
+#18 C:\xampp\htdocs\framework\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#19 C:\xampp\htdocs\framework\web\CWebApplication.php(276): CController->run('view')
+#20 C:\xampp\htdocs\framework\web\CWebApplication.php(135): CWebApplication->runController('folder/view')
+#21 C:\xampp\htdocs\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#22 C:\xampp\htdocs\apostila\index.php(24): CApplication->run()
+#23 {main}
+REQUEST_URI=/apostila/index.php/folder/1
+---
+2013/03/04 15:07:47 [error] [exception.CException] exception 'CException' with message 'Property "Folder.contenttype_id" is not defined.' in C:\xampp\htdocs\framework\base\CComponent.php:131
+Stack trace:
+#0 C:\xampp\htdocs\framework\db\ar\CActiveRecord.php(144): CComponent->__get('contenttype_id')
+#1 C:\xampp\htdocs\apostila\protected\views\folder\_folder_icon.php(4): CActiveRecord->__get('contenttype_id')
+#2 C:\xampp\htdocs\framework\web\CBaseController.php(127): require('C:\xampp\htdocs...')
+#3 C:\xampp\htdocs\framework\web\CBaseController.php(96): CBaseController->renderInternal('C:\xampp\htdocs...', Array, true)
+#4 C:\xampp\htdocs\framework\web\CController.php(870): CBaseController->renderFile('C:\xampp\htdocs...', Array, true)
+#5 C:\xampp\htdocs\apostila\protected\views\folder\_header.php(10): CController->renderPartial('_folder_icon', Array)
+#6 C:\xampp\htdocs\framework\web\CBaseController.php(127): require('C:\xampp\htdocs...')
+#7 C:\xampp\htdocs\framework\web\CBaseController.php(96): CBaseController->renderInternal('C:\xampp\htdocs...', Array, true)
+#8 C:\xampp\htdocs\framework\web\CController.php(870): CBaseController->renderFile('C:\xampp\htdocs...', Array, true)
+#9 C:\xampp\htdocs\apostila\protected\views\folder\view.php(7): CController->renderPartial('_header', Array)
+#10 C:\xampp\htdocs\framework\web\CBaseController.php(127): require('C:\xampp\htdocs...')
+#11 C:\xampp\htdocs\framework\web\CBaseController.php(96): CBaseController->renderInternal('C:\xampp\htdocs...', Array, true)
+#12 C:\xampp\htdocs\framework\web\CController.php(870): CBaseController->renderFile('C:\xampp\htdocs...', Array, true)
+#13 C:\xampp\htdocs\framework\web\CController.php(783): CController->renderPartial('view', Array, true)
+#14 C:\xampp\htdocs\apostila\protected\controllers\FolderController.php(26): CController->render('view', Array)
+#15 C:\xampp\htdocs\framework\web\actions\CInlineAction.php(50): FolderController->actionView()
+#16 C:\xampp\htdocs\framework\web\CController.php(309): CInlineAction->runWithParams(Array)
+#17 C:\xampp\htdocs\framework\web\CController.php(287): CController->runAction(Object(CInlineAction))
+#18 C:\xampp\htdocs\framework\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#19 C:\xampp\htdocs\framework\web\CWebApplication.php(276): CController->run('view')
+#20 C:\xampp\htdocs\framework\web\CWebApplication.php(135): CWebApplication->runController('folder/view')
+#21 C:\xampp\htdocs\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#22 C:\xampp\htdocs\apostila\index.php(24): CApplication->run()
+#23 {main}
+REQUEST_URI=/apostila/index.php/folder/1
+---
+2013/03/04 15:08:32 [error] [exception.CException] exception 'CException' with message 'Property "Folder.contenttype_id" is not defined.' in C:\xampp\htdocs\framework\base\CComponent.php:131
+Stack trace:
+#0 C:\xampp\htdocs\framework\db\ar\CActiveRecord.php(144): CComponent->__get('contenttype_id')
+#1 C:\xampp\htdocs\apostila\protected\views\folder\_folder_icon.php(4): CActiveRecord->__get('contenttype_id')
+#2 C:\xampp\htdocs\framework\web\CBaseController.php(127): require('C:\xampp\htdocs...')
+#3 C:\xampp\htdocs\framework\web\CBaseController.php(96): CBaseController->renderInternal('C:\xampp\htdocs...', Array, true)
+#4 C:\xampp\htdocs\framework\web\CController.php(870): CBaseController->renderFile('C:\xampp\htdocs...', Array, true)
+#5 C:\xampp\htdocs\apostila\protected\views\folder\_header.php(10): CController->renderPartial('_folder_icon', Array)
+#6 C:\xampp\htdocs\framework\web\CBaseController.php(127): require('C:\xampp\htdocs...')
+#7 C:\xampp\htdocs\framework\web\CBaseController.php(96): CBaseController->renderInternal('C:\xampp\htdocs...', Array, true)
+#8 C:\xampp\htdocs\framework\web\CController.php(870): CBaseController->renderFile('C:\xampp\htdocs...', Array, true)
+#9 C:\xampp\htdocs\apostila\protected\views\folder\view.php(7): CController->renderPartial('_header', Array)
+#10 C:\xampp\htdocs\framework\web\CBaseController.php(127): require('C:\xampp\htdocs...')
+#11 C:\xampp\htdocs\framework\web\CBaseController.php(96): CBaseController->renderInternal('C:\xampp\htdocs...', Array, true)
+#12 C:\xampp\htdocs\framework\web\CController.php(870): CBaseController->renderFile('C:\xampp\htdocs...', Array, true)
+#13 C:\xampp\htdocs\framework\web\CController.php(783): CController->renderPartial('view', Array, true)
+#14 C:\xampp\htdocs\apostila\protected\controllers\FolderController.php(26): CController->render('view', Array)
+#15 C:\xampp\htdocs\framework\web\actions\CInlineAction.php(50): FolderController->actionView()
+#16 C:\xampp\htdocs\framework\web\CController.php(309): CInlineAction->runWithParams(Array)
+#17 C:\xampp\htdocs\framework\web\CController.php(287): CController->runAction(Object(CInlineAction))
+#18 C:\xampp\htdocs\framework\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#19 C:\xampp\htdocs\framework\web\CWebApplication.php(276): CController->run('view')
+#20 C:\xampp\htdocs\framework\web\CWebApplication.php(135): CWebApplication->runController('folder/view')
+#21 C:\xampp\htdocs\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#22 C:\xampp\htdocs\apostila\index.php(24): CApplication->run()
+#23 {main}
+REQUEST_URI=/apostila/index.php/folder/1
+---
+2013/03/04 15:09:22 [error] [php] Argument 1 passed to Document::searchInFolder() must be an instance of Folder, null given, called in C:\xampp\htdocs\apostila\protected\controllers\FolderController.php on line 18 and defined (C:\xampp\htdocs\apostila\protected\models\Document.php:155)
+Stack trace:
+#0 C:\xampp\htdocs\framework\web\CController.php(309): CInlineAction->runWithParams()
+#1 C:\xampp\htdocs\framework\web\CController.php(287): FolderController->runAction()
+#2 C:\xampp\htdocs\framework\web\CController.php(266): FolderController->runActionWithFilters()
+#3 C:\xampp\htdocs\framework\web\CWebApplication.php(276): FolderController->run()
+#4 C:\xampp\htdocs\framework\web\CWebApplication.php(135): CWebApplication->runController()
+#5 C:\xampp\htdocs\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#6 C:\xampp\htdocs\apostila\index.php(24): CWebApplication->run()
+REQUEST_URI=/apostila/index.php/folder/4
+in C:\xampp\htdocs\apostila\protected\models\Document.php (155)
+in C:\xampp\htdocs\apostila\protected\controllers\FolderController.php (18)
+in C:\xampp\htdocs\apostila\index.php (24)

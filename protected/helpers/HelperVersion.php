@@ -21,10 +21,10 @@ class HelperVersion {
         $dt =$model->type->instanceModelName.'Version';  //LetterVersion;
         $version = new $dt;
         $version->instanceId = $model->instanceId;
-        $version->fileFormatId = $model->fileFormatId;
+        $version->file_format_id = $model->file_format_id;
         $version->file = $oldName;
         $version->updateUserId = $user->getId();
-        $version->updateTime = new CDbExpression('NOW()');
+        $version->update_time = new CDbExpression('NOW()');
         $version->save();
     }
     
@@ -36,9 +36,9 @@ class HelperVersion {
         $fileName = uniqid() . '.' . $extension;
         $model->file->saveAs(Yii::app()->basePath . '/data/files/' . $fileName);
                 
-        $fileFormatId = HelpersStorage::GetFileFormatIdByExtension($extension);
+        $file_format_id = HelpersStorage::Getfile_format_idByExtension($extension);
         
-        $model->updateByPk($model->id, array('fileFormatId'=>$fileFormatId, 'file'=>$fileName, 'checkOutUserId'=>null));
+        $model->updateByPk($model->id, array('file_format_id'=>$file_format_id, 'file'=>$fileName, 'checkOutUserId'=>null));
     }
 }
 

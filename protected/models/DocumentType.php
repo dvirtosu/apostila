@@ -61,9 +61,9 @@ class DocumentType extends CActiveRecord
 		// NOTE: you may need to adjust the relation name and the related
 		// class name for the relations automatically generated below.
 		return array(
-			'documents' => array(self::HAS_MANY, 'Document', 'typeId'),
+			'documents' => array(self::HAS_MANY, 'Document', 'type_id'),
 			'category' => array(self::BELONGS_TO, 'DocumentCategory', 'categoryId'),
-			'folders' => array(self::HAS_MANY, 'Folder', 'documentTypeId'),
+			'folders' => array(self::HAS_MANY, 'Folder', 'documenttype_id'),
 		);
 	}
 

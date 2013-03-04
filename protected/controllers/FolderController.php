@@ -17,7 +17,7 @@ class FolderController extends Controller
         
         $dataProvider = Document::model()->searchInFolder($folder);
         
-        Yii::app()->params['currentFolderId'] = $folderId;
+        Yii::app()->params['current_folder_id'] = $folderId;
         
         $this->render('view', array(
             'folder'        => $folder,
@@ -50,13 +50,13 @@ class FolderController extends Controller
             $folder = Folder::model()->findByPk($_POST['folderId']);
             $selectedObjectsIds = array_unique($selectedObjectsIds);
             
-            if ($folder && $folder->contentTypeId == 3 && !empty($folder->route))
+            if ($folder && $folder->content_type_id == 3 && !empty($folder->route_id))
             {
                 foreach ($selectedObjectsIds as $id)
                 {
                     $folderContent = new FolderContent();
-                    $folderContent->folderId = $folder->id;
-                    $folderContent->documentId = $id;
+                    $folderContent->folder_id = $folder->id;
+                    $folderContent->document_id = $id;
                     $folderContent->save();
                 }
             }

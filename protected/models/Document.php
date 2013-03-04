@@ -131,7 +131,7 @@ class Document extends CActiveRecord
                 
                 $documentType = DocumentType::model()->findByPk($this->type_id);
                 $this->title = $documentType->title . ' ' . rand();
-                $this->file_format_id = HelpersStorage::GetFileFormatIdByExtension($extension);
+                $this->file_format_id = HelpersStorage::Getfile_format_idByExtension($extension);
                 $this->file = $fileName;
                 $this->create_user_id = $user->getId();
                 $this->create_time = new CDbExpression('NOW()');
@@ -173,11 +173,11 @@ class Document extends CActiveRecord
                 {
                     $criteria->condition = $folder->searchCriteria . ' AND type_id=:type_id';
                 }
-                $criteria->params = array_merge($criteria->params, array(":type_id"=>$folder->documentTypeId));
+                $criteria->params = array_merge($criteria->params, array(":type_id"=>$folder->documenttype_id));
                 break;
             case 3: // Sample
-                $criteria->with = array('folders_ontents'=>array(
-                    'on' => 'folders_ontents.folder_id=' . $folder->id,
+                $criteria->with = array('folderContents'=>array(
+                    'on' => 'folderContents.folder_id=' . $folder->id,
                     'together'=>true,
                     'joinType'=>'INNER JOIN',
                 ));
@@ -186,11 +186,11 @@ class Document extends CActiveRecord
         
         $criteria->compare('id',$this->id);
         $criteria->compare('title',$this->title,true);
-        $criteria->compare('fileFormatId',$this->fileFormatId);
-        $criteria->compare('createUserId',$this->createUserId);
-        $criteria->compare('createTime',$this->createTime,true);
-        $criteria->compare('updateUserId',$this->updateUserId);
-        $criteria->compare('updateTime',$this->updateTime,true);
+        $criteria->compare('file_format_id',$this->file_format_id);
+        $criteria->compare('create_user_id',$this->create_user_id);
+        $criteria->compare('create_time',$this->create_time,true);
+        $criteria->compare('update_user_id',$this->update_user_id);
+        $criteria->compare('update_time',$this->update_time,true);
 
         return new CActiveDataProvider($this, array(
             'criteria'=>$criteria,

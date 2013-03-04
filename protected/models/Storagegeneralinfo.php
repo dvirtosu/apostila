@@ -8,9 +8,9 @@
  * @property string $name
  * @property string $value
  * @property integer $createUserId
- * @property string $createTime
+ * @property string $create_time
  * @property integer $updateUserId
- * @property string $updateTime
+ * @property string $update_time
  */
 class Storagegeneralinfo extends CActiveRecord
 {
@@ -40,14 +40,14 @@ class Storagegeneralinfo extends CActiveRecord
 		// NOTE: you should only define rules for those attributes that
 		// will receive user inputs.
 		return array(
-			array('name, createUserId, createTime', 'required'),
+			array('name, createUserId, create_time', 'required'),
 			array('createUserId, updateUserId', 'numerical', 'integerOnly'=>true),
 			array('name', 'length', 'max'=>100),
 			array('value', 'length', 'max'=>255),
-			array('updateTime', 'safe'),
+			array('update_time', 'safe'),
 			// The following rule is used by search().
 			// Please remove those attributes that should not be searched.
-			array('id, name, value, createUserId, createTime, updateUserId, updateTime', 'safe', 'on'=>'search'),
+			array('id, name, value, createUserId, create_time, updateUserId, update_time', 'safe', 'on'=>'search'),
 		);
 	}
 
@@ -72,9 +72,9 @@ class Storagegeneralinfo extends CActiveRecord
 			'name' => 'Name',
 			'value' => 'Value',
 			'createUserId' => 'Create User',
-			'createTime' => 'Create Time',
+			'create_time' => 'Create Time',
 			'updateUserId' => 'Update User',
-			'updateTime' => 'Update Time',
+			'update_time' => 'Update Time',
 		);
 	}
 
@@ -93,9 +93,9 @@ class Storagegeneralinfo extends CActiveRecord
 		$criteria->compare('name',$this->name,true);
 		$criteria->compare('value',$this->value,true);
 		$criteria->compare('createUserId',$this->createUserId);
-		$criteria->compare('createTime',$this->createTime,true);
+		$criteria->compare('create_time',$this->create_time,true);
 		$criteria->compare('updateUserId',$this->updateUserId);
-		$criteria->compare('updateTime',$this->updateTime,true);
+		$criteria->compare('update_time',$this->update_time,true);
 
 		return new CActiveDataProvider($this, array(
 			'criteria'=>$criteria,

@@ -6,7 +6,7 @@
  */
 class HelpersStorage
 {
-    public static function GetFileFormatIdByExtension($ext)
+    public static function Getfile_format_idByExtension($ext)
     {
         $format =  FileFormat::model()->find('extension=:extension', array(':extension'=>$ext));
         return $format->id;

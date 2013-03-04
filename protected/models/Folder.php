@@ -108,17 +108,17 @@ class Folder extends CActiveRecord
 		$criteria=new CDbCriteria;
 
 		$criteria->compare('id',$this->id);
-		$criteria->compare('parent_id',$this->parentId);
-		$criteria->compare('route_id',$this->route,true);
+		$criteria->compare('parent_id',$this->parent_id);
+		$criteria->compare('route_id',$this->route_id,true);
 		$criteria->compare('title',$this->title,true);
-		$criteria->compare('folder_type_id',$this->typeId);
-		$criteria->compare('content_type_id',$this->contentTypeId);
-		$criteria->compare('search_criteria',$this->searchCriteria,true);
-		$criteria->compare('document_type_id',$this->documentTypeId);
-		$criteria->compare('create_user',$this->createUserId);
-		$criteria->compare('create_time',$this->createTime,true);
-		$criteria->compare('update_user',$this->updateUserId);
-		$criteria->compare('update_time',$this->updateTime,true);
+		$criteria->compare('folder_type_id',$this->type_id);
+		$criteria->compare('content_type_id',$this->content_type_id);
+		$criteria->compare('search_criteria',$this->search_criteria,true);
+		$criteria->compare('document_type_id',$this->document_type_id);
+		$criteria->compare('create_user',$this->create_user);
+		$criteria->compare('create_time',$this->create_time,true);
+		$criteria->compare('update_user',$this->update_user);
+		$criteria->compare('update_time',$this->update_time,true);
 
 		return new CActiveDataProvider($this, array(
 			'criteria'=>$criteria,

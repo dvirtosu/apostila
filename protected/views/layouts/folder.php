@@ -17,8 +17,8 @@
         <?php $this->renderPartial('/layouts/_js_site_object') ?>
         <script type="text/javascript">
             var CurrentFolder = {
-                ID: <?php echo Yii::app()->params['currentFolderId'] ?>,
-                UPDATE_URL: '<?php echo $this->createUrl('folder/view', array('id'=>Yii::app()->params['currentFolderId'])) ?>'
+                ID: <?php echo Yii::app()->params['current_folder_id'] ?>,
+                UPDATE_URL: '<?php echo $this->createUrl('folder/view', array('id'=>Yii::app()->params['current_folder_id'])) ?>'
             };
         </script>
         <script type="text/javascript" src="<?php echo Html::jsUrl('common.js') ?>"></script>

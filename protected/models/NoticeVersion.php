@@ -6,9 +6,9 @@
  * The followings are the available columns in table 'dt_notices_version':
  * @property integer $id
  * @property integer $instanceId
- * @property integer $fileFormatId
+ * @property integer $file_format_id
  * @property integer $updateUserId
- * @property string $updateTime
+ * @property string $update_time
  */
 class NoticeVersion extends CActiveRecord
 {
@@ -38,11 +38,11 @@ class NoticeVersion extends CActiveRecord
 		// NOTE: you should only define rules for those attributes that
 		// will receive user inputs.
 		return array(
-			array('instanceId, fileFormatId', 'required'),
-			array('instanceId, fileFormatId', 'numerical', 'integerOnly'=>true),
+			array('instanceId, file_format_id', 'required'),
+			array('instanceId, file_format_id', 'numerical', 'integerOnly'=>true),
 			// The following rule is used by search().
 			// Please remove those attributes that should not be searched.
-			array('id, instanceId, fileFormatId', 'safe', 'on'=>'search'),
+			array('id, instanceId, file_format_id', 'safe', 'on'=>'search'),
 		);
 	}
 
@@ -54,7 +54,7 @@ class NoticeVersion extends CActiveRecord
 		// NOTE: you may need to adjust the relation name and the related
 		// class name for the relations automatically generated below.
 		return array(
-			'fileFormat' => array(self::BELONGS_TO, 'FileFormat', 'fileFormatId'),
+			'fileFormat' => array(self::BELONGS_TO, 'FileFormat', 'file_format_id'),
             'updateUser' => array(self::BELONGS_TO, 'User', 'updateUserId'),
 		);
 	}
@@ -68,7 +68,7 @@ class NoticeVersion extends CActiveRecord
 			'id' => 'ID',
 			'instanceId' => 'Instance',
 			'file' => 'File',
-			'fileFormatId' => 'File Format',
+			'file_format_id' => 'File Format',
 		);
 	}
 

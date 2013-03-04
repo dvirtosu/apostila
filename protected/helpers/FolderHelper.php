@@ -2,5 +2,5 @@
 
 class FolderHelper
 {
-    const DEFAULT_FOLDER_ID = 4; // favorites
+    const DEFAULT_FOLDER_ID = 1; // favorites
 }

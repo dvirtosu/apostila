@@ -30,7 +30,7 @@
                             array(
                                 'type' => 'POST',
                                 'url' => Controller::createUrl('document/categoriesOptions'),
-                                'update' => '#' . CHtml::activeId($model, 'typeId')
+                                'update' => '#' . CHtml::activeId($model, 'type_id')
                             )
                         )
                     )); ?>
@@ -38,13 +38,13 @@
             </div>
          
             <div class="row">
-                <?php echo $form->labelEx($model, 'typeId'); ?>
+                <?php echo $form->labelEx($model, 'type_id'); ?>
                 <?php echo $form->dropDownList(
-                    $model, 'typeId', CHtml::listData(DocumentType::model()->findAll(), 'id', 'title'), 
+                    $model, 'type_id', CHtml::listData(DocumentType::model()->findAll(), 'id', 'title'), 
                     array(
                         'prompt' => '-Select Document Type-',
                     )); ?>
-                <?php echo $form->error($model,'typeId'); ?>
+                <?php echo $form->error($model,'type_id'); ?>
             </div>
 
             <div class="row buttons">

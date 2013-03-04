@@ -30,7 +30,7 @@
                             Deschide Cartela
                         </a>
                         <a href="#" class="mark-unread">Marchează ca necitit</a>
-                        <?php if ($folder->contentTypeId == 3): ?>
+                        <?php if ($folder->content_type_id == 3): ?>
                             <img src="<?php echo Html::imageUrl('icons/16/delete-links.png') ?>" />
                             <a href="#" class="delete-reference">Şterge referinţă</a>
                         <?php endif; ?>
