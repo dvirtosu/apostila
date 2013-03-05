@@ -1,20 +1,19 @@
 <?php
 
-/**
- * This is the model class for table "documentType".
- *
- * The followings are the available columns in table 'documentType':
- * @property integer $id
+/** 
+ * This is the model class for table "sys_documents_types". 
+ * 
+ * The followings are the available columns in table 'sys_documents_types': 
+ * @property string $id
  * @property string $title
- * @property string $route
- * @property string $instanceModelName
- * @property integer $categoryId
- *
- * The followings are the available model relations:
- * @property Document[] $documents
- * @property DocumentCategory $category
- * @property Folder[] $folders
- */
+ * @property string $route_id
+ * @property string $instance_model_name
+ * @property string $category_id
+ * @property string $create_user
+ * @property string $create_time
+ * @property string $update_user
+ * @property string $update_time
+ */ 
 class DocumentType extends CActiveRecord
 {
 	/**
@@ -42,15 +41,15 @@ class DocumentType extends CActiveRecord
 	{
 		// NOTE: you should only define rules for those attributes that
 		// will receive user inputs.
-		return array(
-			array('title, instanceModelName, categoryId', 'required'),
-			array('categoryId', 'numerical', 'integerOnly'=>true),
-			array('title', 'length', 'max'=>256),
-			array('route, instanceModelName', 'length', 'max'=>128),
-			// The following rule is used by search().
-			// Please remove those attributes that should not be searched.
-			array('id, title, route, instanceModelName, categoryId', 'safe', 'on'=>'search'),
-		);
+		 return array( 
+                    array('title, route_id, category_id, create_user, create_time', 'required'),
+                    array('title, instance_model_name', 'length', 'max'=>100),
+                    array('route_id, category_id, create_user, update_user', 'length', 'max'=>20),
+                    array('update_time', 'safe'),
+                    // The following rule is used by search(). 
+                    // Please remove those attributes that should not be searched. 
+                    array('id, title, route_id, instance_model_name, category_id, create_user, create_time, update_user, update_time', 'safe', 'on'=>'search'),
+                ); 
 	}
 
 	/**
@@ -62,8 +61,8 @@ class DocumentType extends CActiveRecord
 		// class name for the relations automatically generated below.
 		return array(
 			'documents' => array(self::HAS_MANY, 'Document', 'type_id'),
-			'category' => array(self::BELONGS_TO, 'DocumentCategory', 'categoryId'),
-			'folders' => array(self::HAS_MANY, 'Folder', 'documenttype_id'),
+			'category' => array(self::BELONGS_TO, 'DocumentCategory', 'category_id'),
+			'routes' => array(self::BELONGS_TO, 'Routes', 'route_id'),
 		);
 	}
 
@@ -72,13 +71,17 @@ class DocumentType extends CActiveRecord
 	 */
 	public function attributeLabels()
 	{
-		return array(
-			'id' => 'ID',
-			'title' => 'Title',
-			'route' => 'Route',
-			'instanceModelName' => 'Instance Model Name',
-			'categoryId' => 'Category',
-		);
+		 return array( 
+                    'id' => 'ID',
+                    'title' => 'Title',
+                    'route_id' => 'Route',
+                    'instance_model_name' => 'Instance Model Name',
+                    'category_id' => 'Category',
+                    'create_user' => 'Create User',
+                    'create_time' => 'Create Time',
+                    'update_user' => 'Update User',
+                    'update_time' => 'Update Time',
+                ); 
 	}
 
 	/**

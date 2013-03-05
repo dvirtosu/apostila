@@ -53,9 +53,8 @@ class DocumentAction extends CActiveRecord
 	{
 		// NOTE: you may need to adjust the relation name and the related
 		// class name for the relations automatically generated below.
-		return array(
-			'documenthhistories' => array(self::HAS_MANY, 'Documenthhistory', 'Action_id'),
-                        'lettershistories' => array(self::HAS_MANY, 'Lettershistory', 'Action_id'),
+		return array(			
+                        'BirthCertificatesHistory' => array(self::HAS_MANY, 'BirthCertificatesHistory', 'action_id'),
 		);
 	}
 

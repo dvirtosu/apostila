@@ -1,35 +1,34 @@
 <?php
 
-/** 
- * This is the model class for table "sys_folders_contents". 
- * 
- * The followings are the available columns in table 'sys_folders_contents': 
+/**
+ * This is the model class for table "dt_birth_certificates_version".
+ *
+ * The followings are the available columns in table 'dt_birth_certificates_version':
  * @property string $id
- * @property string $folder_id
- * @property string $document_id
- * @property string $create_user
- * @property string $create_time
+ * @property string $instance_id
+ * @property string $file
+ * @property string $file_format_id
  * @property string $update_user
  * @property string $update_time
- */ 
-class FolderContent extends CActiveRecord
+ */
+class BirthCertificatesVersion extends CActiveRecord
 {
 	/**
 	 * Returns the static model of the specified AR class.
 	 * @param string $className active record class name.
-	 * @return FolderContent the static model class
+	 * @return BirthCertificatesVersion the static model class
 	 */
 	public static function model($className=__CLASS__)
 	{
 		return parent::model($className);
 	}
-	
+
 	/**
 	 * @return string the associated database table name
 	 */
 	public function tableName()
 	{
-		return 'sys_folders_contents';
+		return 'dt_birth_certificates_version';
 	}
 
 	/**
@@ -40,12 +39,12 @@ class FolderContent extends CActiveRecord
 		// NOTE: you should only define rules for those attributes that
 		// will receive user inputs.
 		return array(
-			array('folder_id, document_id', 'required'),
-			array('folder_id, document_id', 'numerical', 'integerOnly'=>true),
-                        array('document_id+folder_id', 'application.extensions.UniqueMultiColumnValidator'),
+			array('instance_id, file, file_format_id, update_user, update_time', 'required'),
+			array('instance_id, file_format_id, update_user', 'length', 'max'=>20),
+			array('file', 'length', 'max'=>100),
 			// The following rule is used by search().
 			// Please remove those attributes that should not be searched.
-			array('id, folder_id, document_id', 'safe', 'on'=>'search'),
+			array('id, instance_id, file, file_format_id, update_user, update_time', 'safe', 'on'=>'search'),
 		);
 	}
 
@@ -57,8 +56,8 @@ class FolderContent extends CActiveRecord
 		// NOTE: you may need to adjust the relation name and the related
 		// class name for the relations automatically generated below.
 		return array(
-			'folder' => array(self::BELONGS_TO, 'Folder', 'folder_id'),
-			'document' => array(self::BELONGS_TO, 'Document', 'document_id'),
+			'fileFormat' => array(self::BELONGS_TO, 'FileFormat', 'file_format_id'),
+                        'updateUser' => array(self::BELONGS_TO, 'User', 'update_user'),
 		);
 	}
 
@@ -69,8 +68,9 @@ class FolderContent extends CActiveRecord
 	{
 		return array(
 			'id' => 'ID',
-			'folder_id' => 'Folder',
-			'document_id' => 'Document',
+			'instance_id' => 'Instance',
+			'file' => 'File',
+			'file_format_id' => 'File Format',
 		);
 	}
 
@@ -84,13 +84,12 @@ class FolderContent extends CActiveRecord
 		// should not be searched.
 
 		$criteria=new CDbCriteria;
+        
+                $criteria->compare('instance_id',$this->instance_id);
 
-		$criteria->compare('id',$this->id);
-		$criteria->compare('folder_id',$this->folder_id);
-		$criteria->compare('document_id',$this->document_id);
-
-		return new CActiveDataProvider($this, array(
-			'criteria'=>$criteria,
-		));
+                return new CActiveDataProvider($this, array(
+                    'criteria'=>$criteria,
+                    'pagination' => array('pageSize' => 10),
+                ));
 	}
 }

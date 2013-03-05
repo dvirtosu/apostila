@@ -19,7 +19,7 @@ class DocumentController extends Controller
             $model->file = CUploadedFile::getInstance($model, 'file');
             if($model->save())
             {
-                $this->redirect(array($model->type->route.'/create','id'=>$model->id));
+                $this->redirect(array($model->type->routes->title.'/create','id'=>$model->id));
             }
         }
                 
@@ -97,7 +97,7 @@ class DocumentController extends Controller
             if($model->save())
             {
                 HelperVersion::add($model, $oldName);
-                $this->redirect(array($model->type->route.'/update','id'=>$model->instanceId));
+                $this->redirect(array($model->type->routes->title.'/update','id'=>$model->instance_id));
             }
         }
 

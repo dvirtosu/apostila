@@ -30,7 +30,7 @@ class FileFormat extends CActiveRecord
 	 */
 	public function tableName()
 	{
-		return 'sys_file_formats';
+		return 'sys_files_formats';
 	}
 
 	/**

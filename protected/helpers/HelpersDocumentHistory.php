@@ -10,11 +10,11 @@
     {
         $user = Yii::app()->user;
         
-        $history->DataTime = date('Y-m-d h:i:s', time());
-        $history->Action_id = DocumentAction::model()->find('Description='."'".'Create'."'")->id;
-        $history->doc_id = $id;
-        $history->Doc_version = 1;
-        $history->User_id = $user->getId();
+        $history->update_time = date('Y-m-d h:i:s', time());
+        $history->action_id = DocumentAction::model()->find('Description='."'".'Create'."'")->id;
+        $history->document_id = $id;
+        $history->version_id = 1;
+        $history->update_user = $user->getId();
         if ($history->validate()) 
             $history->save();
     }
@@ -22,21 +22,21 @@
     {
         $user = Yii::app()->user;
         
-        $history->DataTime = date('Y-m-d h:i:s', time());
-        $history->Action_id = DocumentAction::model()->find('Description='."'".'Update'."'")->id;
-        $history->doc_id = $id;
-        $history->Doc_version = 1;
-        $history->User_id = $user->getId();
+        $history->update_time = date('Y-m-d h:i:s', time());
+        $history->action_id = DocumentAction::model()->find('Description='."'".'Update'."'")->id;
+        $history->document_id = $id;
+        $history->version_id = 1;
+        $history->update_user = $user->getId();
         if ($history->validate()) 
             $history->save();
     }
     public static function HistoryMoveToOperativ($id,$history)
     {
-        $history->DataTime = date('Y-m-d h:i:s', time());
-        $history->Action_id = DocumentAction::model()->find('Description='."'".'MoveToOperativ'."'")->id;
-        $history->doc_id = $id;
-        $history->Doc_version = 1;
-        $history->User_id = Yii::app()->user->id;
+        $history->update_time = date('Y-m-d h:i:s', time());
+        $history->action_id = DocumentAction::model()->find('Description='."'".'MoveToOperativ'."'")->id;
+        $history->document_id = $id;
+        $history->version_id = 1;
+        $history->update_user = Yii::app()->user->id;
         if ($history->validate()) 
             $history->save();
     }

@@ -1,35 +1,34 @@
 <?php
 
-/** 
- * This is the model class for table "sys_folders_contents". 
- * 
- * The followings are the available columns in table 'sys_folders_contents': 
+/**
+ * This is the model class for table "sys_routes".
+ *
+ * The followings are the available columns in table 'sys_routes':
  * @property string $id
- * @property string $folder_id
- * @property string $document_id
+ * @property string $title
  * @property string $create_user
  * @property string $create_time
  * @property string $update_user
  * @property string $update_time
- */ 
-class FolderContent extends CActiveRecord
+ */
+class Routes extends CActiveRecord
 {
 	/**
 	 * Returns the static model of the specified AR class.
 	 * @param string $className active record class name.
-	 * @return FolderContent the static model class
+	 * @return Routes the static model class
 	 */
 	public static function model($className=__CLASS__)
 	{
 		return parent::model($className);
 	}
-	
+
 	/**
 	 * @return string the associated database table name
 	 */
 	public function tableName()
 	{
-		return 'sys_folders_contents';
+		return 'sys_routes';
 	}
 
 	/**
@@ -40,12 +39,13 @@ class FolderContent extends CActiveRecord
 		// NOTE: you should only define rules for those attributes that
 		// will receive user inputs.
 		return array(
-			array('folder_id, document_id', 'required'),
-			array('folder_id, document_id', 'numerical', 'integerOnly'=>true),
-                        array('document_id+folder_id', 'application.extensions.UniqueMultiColumnValidator'),
+			array('title, create_user, create_time', 'required'),
+			array('title', 'length', 'max'=>100),
+			array('create_user, update_user', 'length', 'max'=>20),
+			array('update_time', 'safe'),
 			// The following rule is used by search().
 			// Please remove those attributes that should not be searched.
-			array('id, folder_id, document_id', 'safe', 'on'=>'search'),
+			array('id, title, create_user, create_time, update_user, update_time', 'safe', 'on'=>'search'),
 		);
 	}
 
@@ -57,8 +57,7 @@ class FolderContent extends CActiveRecord
 		// NOTE: you may need to adjust the relation name and the related
 		// class name for the relations automatically generated below.
 		return array(
-			'folder' => array(self::BELONGS_TO, 'Folder', 'folder_id'),
-			'document' => array(self::BELONGS_TO, 'Document', 'document_id'),
+                    'documentsType' => array(self::HAS_MANY, 'DocumentType', 'route_id'),
 		);
 	}
 
@@ -69,8 +68,11 @@ class FolderContent extends CActiveRecord
 	{
 		return array(
 			'id' => 'ID',
-			'folder_id' => 'Folder',
-			'document_id' => 'Document',
+			'title' => 'Title',
+			'create_user' => 'Create User',
+			'create_time' => 'Create Time',
+			'update_user' => 'Update User',
+			'update_time' => 'Update Time',
 		);
 	}
 
@@ -85,9 +87,12 @@ class FolderContent extends CActiveRecord
 
 		$criteria=new CDbCriteria;
 
-		$criteria->compare('id',$this->id);
-		$criteria->compare('folder_id',$this->folder_id);
-		$criteria->compare('document_id',$this->document_id);
+		$criteria->compare('id',$this->id,true);
+		$criteria->compare('title',$this->title,true);
+		$criteria->compare('create_user',$this->create_user,true);
+		$criteria->compare('create_time',$this->create_time,true);
+		$criteria->compare('update_user',$this->update_user,true);
+		$criteria->compare('update_time',$this->update_time,true);
 
 		return new CActiveDataProvider($this, array(
 			'criteria'=>$criteria,

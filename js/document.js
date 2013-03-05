@@ -76,7 +76,7 @@ CurrentDocument.scopeSwitcher = new function() {
 
         var updateUrl  = Site.BASE_URL + '/' + CurrentDocument.ROUTE + '/getUnimplementedEnvironment';
         var updateData = {
-            documentId: CurrentDocument.ID,
+            document_id: CurrentDocument.ID,
             scope: scope
         };
         var callback = function() {};
@@ -125,7 +125,7 @@ CurrentDocument.scopeSwitcher = new function() {
             var $item = $('.scopes-switcher .item[data-scope="documentCard"]');
             
             var updateUrl  = Site.BASE_URL + '/' + CurrentDocument.ROUTE + '/getDocumentCard';
-            var updateData = {documentId: CurrentDocument.ID};
+            var updateData = {document_id: CurrentDocument.ID};
             var callback = function() {};
             
             switchEnviroment($item, updateUrl, updateData, callback);
@@ -134,7 +134,7 @@ CurrentDocument.scopeSwitcher = new function() {
             var $item = $('.scopes-switcher .item[data-scope="documentVersions"]');
             
             var updateUrl  = Site.BASE_URL + '/' + CurrentDocument.ROUTE + '/getDocumentVersions';
-            var updateData = {documentId: CurrentDocument.ID};
+            var updateData = {document_id: CurrentDocument.ID};
             var callback = function() {
                 $('.objects-list .item').hover(
                     function () {
@@ -223,7 +223,7 @@ CurrentDocument.scopeSwitcher = new function() {
             var $item = $('.scopes-switcher .item[data-scope="documentHistory"]');
             
             var updateUrl  = Site.BASE_URL + '/' + CurrentDocument.ROUTE + '/getDocumentHistory';
-            var updateData = {documentId: CurrentDocument.ID};
+            var updateData = {document_id: CurrentDocument.ID};
             var callback = function() {};
             
             switchEnviroment($item, updateUrl, updateData, callback);

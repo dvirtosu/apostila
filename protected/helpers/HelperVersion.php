@@ -18,12 +18,12 @@ class HelperVersion {
     {
         $user = Yii::app()->user;
         
-        $dt =$model->type->instanceModelName.'Version';  //LetterVersion;
+        $dt =$model->type->instanceModelName.'Version';  
         $version = new $dt;
-        $version->instanceId = $model->instanceId;
+        $version->instance_id = $model->instance_id;
         $version->file_format_id = $model->file_format_id;
         $version->file = $oldName;
-        $version->updateUserId = $user->getId();
+        $version->update_user_id = $user->getId();
         $version->update_time = new CDbExpression('NOW()');
         $version->save();
     }

@@ -173,7 +173,7 @@ class Document extends CActiveRecord
                 {
                     $criteria->condition = $folder->searchCriteria . ' AND type_id=:type_id';
                 }
-                $criteria->params = array_merge($criteria->params, array(":type_id"=>$folder->documenttype_id));
+                $criteria->params = array_merge($criteria->params, array(":type_id"=>$folder->document_type_id));
                 break;
             case 3: // Sample
                 $criteria->with = array('folderContents'=>array(
